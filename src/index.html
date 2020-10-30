@@ -2,13 +2,36 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Caesar Cipher</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Cheaters</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Red+Rose&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <div id="root">
-      <h1>Hello world!</h1>
+  <body class="background">
+    <div class="title" id="root">
+      <h1>Cheaters</h1>
     </div>
+    <img class="logo" src="images/logo.png">
+    <form>
+      <div>
+        <span>MENSAGEM:</span> 
+        <input id="message" class="message" type="text" name="message" value="Insira sua mensagem">
+      </div>
+      <div>
+        <br>
+        <span>DESLOCAMENTO:</span>
+        <input id="offset" class="offset" type="number" name="offset"> 
+      </div>
+      <div>
+        <br>
+        <button onclick="function encode()">CRIPTOGRAFAR</button>
+        <button onclick="function decode()">DESCRIPTOGRAFAR</button>
+      </div>
+      <div>
+        <br>
+        <span>RESULTADO:</span>
+        <input id="result" class="result" type="text" name="result">
+      </div>
+    </form>
     <script src="index.js" type="module"></script>
   </body>
 </html>
