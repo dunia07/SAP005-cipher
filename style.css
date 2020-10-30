@@ -1,0 +1,57 @@
+* { 
+    font-family: 'Red Rose';
+}
+
+.background {
+    background-color: black;
+    text-align: center;
+}
+
+.title {
+    color: white;
+    font-size: 25px;
+    line-height: 37px;
+    text-align: center;
+}
+
+.logo {
+    text-align: center;
+    width: 250px;
+    height: 270px;
+}
+
+span {
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+.message {
+    text-align: left;
+    border-radius: 8px;
+    width: 605px;
+}
+
+.offset {
+    text-align: left;
+    border-radius: 8px;
+    width: 100px;
+    margin-right: 10px;
+}
+
+button {
+    background-color: white;
+    border-radius: 8px;
+    text-align: center;
+    width: 150px;
+    margin-right: 10px;
+}
+
+.result {
+    text-align: left;
+    border-radius: 8px;
+    width: 605px;
+}
+
+
