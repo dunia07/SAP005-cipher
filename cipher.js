@@ -6,47 +6,44 @@
 //((codLetraAscii - cod1aLetra + desloc) % tamDoAlfab) + cod1aLetra
 
 //função parseInt = analisa argumento String e retorna inteiro (n precisa, offset tá type=number)
+//função .charCodeAt() = muda de ASCII pra 0 a 25
+//função String.fromCharCode() = retorna pra ASCII
+//.lenght = descobrir o tamanho da String
 
 const cipher = {
 
   encode(offset, message){
 
-    offset = document.getElementById("offset").value
-    message = document.getElementById("message").value
-    
-    const codAsciiFirstLetter = 65
-    const alphabetSize = 26
-    let finalResult = ""
+    const codAsciiFirstLetter = 65;
+    const alphabetSize = 26;
+    let finalResult = "";
 
-    for (let i=0; i<message.lenght; i++){
-      let result = ((message.charCodeAt(i) + offset - codAsciiFirstLetter) % alphabetSize) + codAsciiFirstLetter 
-      let print = String.fromCharCode(result)
+    for (let i=0; i<message.length; i++){
+      let result1 = (message.charCodeAt(i) + offset - codAsciiFirstLetter) % alphabetSize;
+      let result2 = result1 + codAsciiFirstLetter;
+      finalResult += String.fromCharCode(result2);
 
-      finalResult += print
     }
 
-    document.getElementById("result").innerHTML=finalResult
-    return finalResult
+    document.getElementById("result").innerHTML=finalResult;
+    return finalResult;
+
   },
 
   decode(offset, message){
-
-    decode.offset = document.getElementById("offset").value
-    decode.message = document.getElementById("message").value
     
-    const codAsciiFirstLetter = 65
-    const alphabetSize = 26
-    let finalResult = ""
+    const codAsciiFirstLetter = 65;
+    const alphabetSize = 26;
+    let finalResult = "";
 
-    for (let i=0; i<message.lenght; i++){
-      let result = ((message.charCodeAt(i) - offset + codAsciiFirstLetter) % alphabetSize) - codAsciiFirstLetter
-      let print = String.fromCharCode(result)
+    for (let i=0; i<message.length; i++){
+      let result = ((message.charCodeAt(i) - offset + codAsciiFirstLetter) % alphabetSize) - codAsciiFirstLetter;
+      finalResult += String.fromCharCode(result);
 
-      finalResult += print
     }
 
-    document.getElementById("result").innerHTML=finalResult
-    return finalResult
+    document.getElementById("result").innerHTML=finalResult;
+    return finalResult;
   }
   
 }
