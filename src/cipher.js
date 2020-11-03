@@ -9,6 +9,7 @@
 //função .charCodeAt() = muda de ASCII pra 0 a 25
 //função String.fromCharCode() = retorna pra ASCII
 //.lenght = descobrir o tamanho da String
+//.split() = dividir/separar String
 
 const cipher = {
 
@@ -19,9 +20,8 @@ const cipher = {
     let finalResult = "";
 
     for (let i=0; i<message.length; i++){
-      let result1 = (message.charCodeAt(i) + offset - codAsciiFirstLetter) % alphabetSize;
-      let result2 = result1 + codAsciiFirstLetter;
-      finalResult += String.fromCharCode(result2);
+      let result = ((message.charCodeAt(i) - codAsciiFirstLetter + offset) % alphabetSize) + codAsciiFirstLetter;
+      finalResult += String.fromCharCode(result);
 
     }
 
@@ -37,7 +37,7 @@ const cipher = {
     let finalResult = "";
 
     for (let i=0; i<message.length; i++){
-      let result = ((message.charCodeAt(i) - offset + codAsciiFirstLetter) % alphabetSize) - codAsciiFirstLetter;
+      let result = ((message.charCodeAt(i) - codAsciiFirstLetter - offset) % alphabetSize) + codAsciiFirstLetter;
       finalResult += String.fromCharCode(result);
 
     }

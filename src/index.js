@@ -19,7 +19,7 @@ function decodeCipher(){
     let result = document.getElementById("result");
     let resultCipher = cipher.decode(offset, message);
 
-    result.innerHTML=resultCipher;
+    result.value=resultCipher;
 }
 
 
