@@ -5,7 +5,7 @@ import cipher from './cipher.js';
 function encodeCipher(){
 
     let message = document.getElementById("message").value;
-    let offset = document.getElementById("offset").value;
+    let offset = Number(document.getElementById("offset").value);
     let result = document.getElementById("result");
     let resultCipher = cipher.encode(offset, message);
 
@@ -15,7 +15,7 @@ function encodeCipher(){
 function decodeCipher(){
 
     let message = document.getElementById("message").value;
-    let offset = document.getElementById("offset").value;
+    let offset = Number(document.getElementById("offset").value);
     let result = document.getElementById("result");
     let resultCipher = cipher.decode(offset, message);
 

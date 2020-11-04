@@ -25,6 +25,21 @@ const cipher = {
 
     }
 
+    /*let finalResult = "";
+
+    for (let i=0; i<message.length; i++){
+
+      if (message[i].charCodeAt() >=65 && message[i].charCodeAt() <=90){
+        finalResult += String.fromCharCode((message[i].charCodeAt() - 65 + offset) % 26 + 65);
+      } else if (message[i].charCodeAt >= 97 && message[i].charCodeAt() <=122){
+        finalResult += String.fromCharCode((message[i].charCodeAt() - 97 + offset) % 26 + 97);
+      } else {
+        finalResult += String.fromCharCode((message[i].charCodeAt()));
+      }
+
+      return finalResult;
+    }*/
+
     document.getElementById("result").innerHTML=finalResult;
     return finalResult;
 
@@ -37,7 +52,7 @@ const cipher = {
     let finalResult = "";
 
     for (let i=0; i<message.length; i++){
-      let result = ((message.charCodeAt(i) - codAsciiFirstLetter - offset) % alphabetSize) + codAsciiFirstLetter;
+      let result = ((message.charCodeAt(i) + codAsciiFirstLetter - offset) % alphabetSize) + codAsciiFirstLetter;
       finalResult += String.fromCharCode(result);
 
     }
