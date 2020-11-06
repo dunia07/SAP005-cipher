@@ -54,4 +54,18 @@ button {
     width: 605px;
 }
 
+footer {
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+a {
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
 
