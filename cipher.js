@@ -19,13 +19,16 @@ const cipher = {
     const alphabetSize = 26;
     let finalResult = "";
 
-    for (let i=0; i<message.length; i++){
-      let result = ((message.charCodeAt(i) - codAsciiFirstLetter + offset) % alphabetSize) + codAsciiFirstLetter;
-      finalResult += String.fromCharCode(result);
+    if (offset == "" || offset == null || message == "" || message == null){
+      throw new TypeError('User did not enter the data correctly', 'cipher.js', 10)
+    } else {
+      for (let i=0; i<message.length; i++){
+        let result = ((message.charCodeAt(i) - codAsciiFirstLetter + offset) % alphabetSize) + codAsciiFirstLetter;
+        finalResult += String.fromCharCode(result);
 
+      }
     }
-
-    document.getElementById("result").innerHTML=finalResult;
+    //document.getElementById("result").innerHTML=finalResult;
     return finalResult;
 
   },
@@ -36,13 +39,16 @@ const cipher = {
     const alphabetSize = 26;
     let finalResult = "";
 
-    for (let i=0; i<message.length; i++){
-      let result = ((message.charCodeAt(i) + codAsciiFirstLetter - offset) % alphabetSize) + codAsciiFirstLetter;
-      finalResult += String.fromCharCode(result);
+    if (offset == "" || offset == null || message == "" || message == null){
+      throw new TypeError('User did not enter the data correctly', 'cipher.js', 10)
+    } else {
+      for (let i=0; i<message.length; i++){
+        let result = ((message.charCodeAt(i) + codAsciiFirstLetter - offset) % alphabetSize) + codAsciiFirstLetter;
+        finalResult += String.fromCharCode(result);
 
+      }
     }
-
-    document.getElementById("result").innerHTML=finalResult;
+    //document.getElementById("result").innerHTML=finalResult;
     return finalResult;
   }
   
