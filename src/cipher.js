@@ -20,7 +20,7 @@ const cipher = {
     let finalResult = "";
 
     if (offset == "" || offset == null || message == "" || message == null){
-      throw new TypeError('User did not enter the data correctly', 'cipher.js', 10)
+      throw new TypeError('User did not enter the data correctly', 'cipher.js', 23)
     } else {
       for (let i=0; i<message.length; i++){
         let result = ((message.charCodeAt(i) - codAsciiFirstLetter + offset) % alphabetSize) + codAsciiFirstLetter;
@@ -39,7 +39,7 @@ const cipher = {
     let finalResult = "";
 
     if (offset == "" || offset == null || message == "" || message == null){
-      throw new TypeError('User did not enter the data correctly', 'cipher.js', 10)
+      throw new TypeError('User did not enter the data correctly', 'cipher.js', 42)
     } else {
       for (let i=0; i<message.length; i++){
         let result = ((message.charCodeAt(i) + codAsciiFirstLetter - offset) % alphabetSize) + codAsciiFirstLetter;
