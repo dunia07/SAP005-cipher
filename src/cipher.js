@@ -28,7 +28,6 @@ const cipher = {
 
       }
     }
-    //document.getElementById("result").innerHTML=finalResult;
     return finalResult;
 
   },
@@ -48,7 +47,6 @@ const cipher = {
 
       }
     }
-    //document.getElementById("result").innerHTML=finalResult;
     return finalResult;
   }
   
